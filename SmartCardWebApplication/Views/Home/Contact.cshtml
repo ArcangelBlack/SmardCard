@@ -1,0 +1,107 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<address>
+    One Microsoft Way<br />
+    Redmond, WA 98052-6399<br />
+    <abbr title="Phone">P:</abbr>
+    425.555.0100
+</address>
+
+<address>
+    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
+    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
+</address>
+
+<form id="signadorForm" name="signadorForm" method="post" enctype="multipart/form-data" class="form-horizontal">
+    <fieldset>
+
+        <div class="panel panel-default first-box">
+            <div class="panel-heading">Par&agrave;metres</div>
+            <div class="panel-body">
+                <div id="formatContainer" style="display:none;">
+
+
+
+                    <div class="form-group ">
+                        <label class="col-sm-3 control-label" for="signature">Mode de signatura        </label>    <div class="col-sm-9 controls">
+                            <select name="signature" id="signature" class="form-control" onchange="checkMode();">
+                                <option value="11">XAdES_BES_detached</option>
+                                <option value="22">CAdES_BES_detached</option>
+                                <option value="24" selected="selected">CAdES_BES_in_PDF</option>
+
+
+                            </select>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div>
+                    <div class="form-group">
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-9 controls">
+                            <div class="checkbox">
+                                <label for="folderDoc">
+                                    <input type="checkbox" name="folderDoc" value="true" id="folderDoc" onclick="checkDocumentFile();" /><input type="hidden" id="__checkbox_folderDoc" name="__checkbox_folderDoc"
+                                                                                                                                                value="true" />
+                                    Signa tots els documents d'una carpeta
+
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div id="inputCertificateFile">
+
+
+
+                    <div class="form-group ">
+                        <label class="col-sm-3 control-label" for="fileUpload">Document        </label>    <div class="col-sm-9 controls">
+                            <input type="file" name="fileUpload" value="" id="fileUpload" class="form-control" style="height:auto;" />
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="pdfImgs">
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label"></label>
+                        <div class="col-sm-9 controls">
+                            <p><strong>On desitjeu visualitzar la vostra signatura dins dels PDFs?</strong></p>
+                            <p>
+                                <img id="imatgeEsquerra" src="images/pdf_esquerra.png" alt="Esquerra" title="Esquerra" onclick="javascript:setPosicioSignatura('0');" style="border:2px solid red; text-decoration: none; cursor: pointer;margin-right: 10px;">
+                                <img id="imatgeCentre" src="images/pdf_centre.png" alt="Centre" title="Centre" onclick="javascript:setPosicioSignatura('1');" style="text-decoration: none; cursor: pointer;margin-right: 10px;">
+                                <img id="imatgeDreta" src="images/pdf_dreta.png" alt="Dreta" title="Dreta" onclick="javascript:setPosicioSignatura('2');" style="text-decoration: none; cursor: pointer;">
+                            </p>
+                            <p><small>* Si el document PDF cont&eacute; camps de signatura buits la selecci&oacute; anterior no es tindr&agrave; en compte, i es demanar&agrave; que seleccioneu el camp on es realitzar&agrave; la signatura.</small></p>
+                        </div>
+                    </div>
+                    <input type="hidden" name="positionPDFSign" value="100 100 200 200" id="positionPDFSign" />
+                </div>
+
+                <div class="text-center">
+                    <div class="sendButton" id="sendButton">
+                        <input value="Iniciar" id="boto" name="jsp.signador.button.iniciar" class="btn btn-info" onclick="signadorInit()"/>
+                        
+                        <input id="boto" type="submit" class="btn btn-info" value="Iniciar" />
+                    </div>
+
+
+
+                    <div id="loading" style="display:none;">
+                        <i class="fa fa-spinner fa-pulse"></i><span class="loadingText">S'est&agrave; processant la seva sol&middot;licitud, si us plau esperi...</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </fieldset>
+</form>
