@@ -191,6 +191,7 @@
     </Compile>
     <Compile Include="Models\PdfDocumentSigner.cs" />
     <Compile Include="Models\TokenSigner.cs" />
+    <Compile Include="Models\ViewModel\CardViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

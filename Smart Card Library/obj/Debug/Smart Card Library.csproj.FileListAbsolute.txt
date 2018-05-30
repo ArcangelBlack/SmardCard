@@ -4,3 +4,9 @@ C:\Users\ccumpa\Documents\Proyectos Itteria\P-OPD\src-test\SmartCardWebApplicati
 C:\Users\ccumpa\Documents\Proyectos Itteria\P-OPD\src-test\SmartCardWebApplication\Smart Card Library\obj\Debug\Smart Card Library.csproj.CoreCompileInputs.cache
 C:\Users\ccumpa\Documents\Proyectos Itteria\P-OPD\src-test\SmartCardWebApplication\Smart Card Library\obj\Debug\Smart Card Library.dll
 C:\Users\ccumpa\Documents\Proyectos Itteria\P-OPD\src-test\SmartCardWebApplication\Smart Card Library\obj\Debug\Smart Card Library.pdb
+C:\Users\ajaouhari\Documents\Proyectos\ODP\Smart Card Library\bin\Debug\Smart Card Library.dll
+C:\Users\ajaouhari\Documents\Proyectos\ODP\Smart Card Library\bin\Debug\Smart Card Library.pdb
+C:\Users\ajaouhari\Documents\Proyectos\ODP\Smart Card Library\obj\Debug\Smart Card Library.csprojAssemblyReference.cache
+C:\Users\ajaouhari\Documents\Proyectos\ODP\Smart Card Library\obj\Debug\Smart Card Library.csproj.CoreCompileInputs.cache
+C:\Users\ajaouhari\Documents\Proyectos\ODP\Smart Card Library\obj\Debug\Smart Card Library.dll
+C:\Users\ajaouhari\Documents\Proyectos\ODP\Smart Card Library\obj\Debug\Smart Card Library.pdb
