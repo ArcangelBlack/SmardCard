@@ -6,7 +6,9 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
+using System.Web;
 using System.Web.Mvc;
+using iTextSharp.text.pdf;
 using SmartCardWebApplication.Models;
 using SmartCardWebApplication.Models.ViewModel;
 
@@ -23,7 +25,7 @@ namespace SmartCardWebApplication.Controllers
             return View(cardViewModel);
         }
 
-        private void ReadSmartCard(CardViewModel vM )
+        private void ReadSmartCard(CardViewModel vM)
         {
             var smartCardCerts = new List<X509Certificate2>();
             var myStore = new X509Store(StoreName.My, StoreLocation.CurrentUser);
@@ -72,9 +74,39 @@ namespace SmartCardWebApplication.Controllers
             }
         }
 
-        public ActionResult About()
+        //controller para poder seleccionar archivo y poder firmarlo
+
+        [HttpPost]
+        public ActionResult About(HttpPostedFileBase file, CardViewModel cvm)
         {
-            ViewBag.Message = "Your application description page.";
+
+
+            if (file != null && file.ContentLength > 0)
+                try
+                {
+                    string path = Path.Combine(Server.MapPath("~/Documents"),
+                                               Path.GetFileName(file.FileName));
+                    file.SaveAs(path);
+
+                    SignHashed("mariano", "mariano", true, path);
+
+                    ViewBag.Message = "File uploaded successfully";
+
+
+
+                }
+                catch (Exception ex)
+                {
+                    ViewBag.Message = "ERROR:" + ex.Message.ToString();
+                }
+            else
+            {
+                ViewBag.Message = "You have not specified a file.";
+            }
+
+            ViewBag.Message = "Selecciona el fichero para poder firmar.";
+
+
 
             return View();
         }
@@ -91,6 +123,72 @@ namespace SmartCardWebApplication.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
+        }
+
+        public static void SignHashed(string SigReason, string SigContact, bool visible, string path)
+        {
+
+            using (MemoryStream pdfData = new MemoryStream())
+            {
+                //string template = @"C:\Documents and Settings\mshyavitz\My Documents\Visual Studio 2008\Projects\WFMO.RADS.Web\print\sf52.pdf";
+                using (PdfReader pdfReader = new PdfReader(path))
+                {
+                    using (PdfStamper st = PdfStamper.CreateSignature(pdfReader, pdfData, '\0', null, true))
+                    {
+
+                        PdfSignatureAppearance sap = st.SignatureAppearance;
+
+                        sap.Reason = SigReason;
+                        sap.Contact = SigContact;
+
+                        if (visible)
+                            sap.SetVisibleSignature(new iTextSharp.text.Rectangle(100, 100, 250, 150), 1, null);
+
+                        st.FormFlattening = true;
+                        st.Writer.CloseStream = false;
+                        st.Close();
+
+                        //            }
+                        //using (PdfStamper pdfStamper = new PdfStamper(pdfReader, pdfData))
+                        //{
+                        //    AcroFields pdfFormFields = pdfStamper.AcroFields;
+
+                        //    // set fields here. 
+
+                        //    pdfStamper.FormFlattening = true;
+                        //    pdfStamper.Writer.CloseStream = false;
+                        //    pdfStamper.Close();
+                        //}
+                    }
+                }
+
+
+
+
+                //    PdfReader reader = new PdfReader(path);
+                //    //Activate MultiSignatures
+                //    using (FileStream fs = new FileStream(path, FileMode.Open, FileAccess.Read))
+                //    {
+                //        using (MemoryStream ms = new MemoryStream())
+                //        {
+                //            using (PdfStamper st = PdfStamper.CreateSignature(reader, ms, '\0', null, true))
+                //            {
+
+                //                PdfSignatureAppearance sap = st.SignatureAppearance;
+
+                //                sap.Reason = SigReason;
+                //                sap.Contact = SigContact;
+
+                //                if (visible)
+                //                    sap.SetVisibleSignature(new iTextSharp.text.Rectangle(100, 100, 250, 150), 1, null);
+
+                //                st.Close();
+                //            }
+                //        }
+                //    }
+
+                //}
+            }
         }
     }
 }

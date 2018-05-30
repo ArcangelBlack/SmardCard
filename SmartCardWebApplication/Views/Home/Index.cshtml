@@ -8,10 +8,28 @@
 
     <h1>Certificado digital:</h1>
 
-    <h2>Primer campo : @Model.FriendlyName;</h2>
+    <h2>Primer campo : @Model.FriendlyName</h2>
 
-    <h2>Segundo campo : @Model.Issuer;</h2>
+    <h2>Segundo campo : @Model.Issuer</h2>
 
-    <h2>Tercerp campo : @Model.SerialNumber;</h2>
-    </div>
+    <h2>Tercerp campo : @Model.SerialNumber</h2>
+
+</div>
+
+<div>
+
+
+    @using (Html.BeginForm("About", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        @Html.HiddenFor(x => x.FriendlyName)
+        @Html.HiddenFor(x => x.Issuer)
+        @Html.HiddenFor(x => x.SerialNumber)
+
+        <p><b>Selecciona el documento que quieres firmar digitalmente:</b></p>
+        <input class="btn btn-primary" type="file" name="file" />
+        <br />
+        <input class="btn btn-success" type="submit" value="OK" />}
+</div>
+
+
 
