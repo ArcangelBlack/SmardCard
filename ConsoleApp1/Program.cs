@@ -13,7 +13,7 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            List<X509Certificate2> certs = BaseSmartCardCryptoProvider.GetCertificates();
+            //List<X509Certificate2> certs = BaseSmartCardCryptoProvider.GetCertificates();
 
             ReadSmartCard();
             Console.WriteLine("------------------------------ReadSmartCard -----------------------------------");
