@@ -5,6 +5,16 @@ using System.Web;
 
 namespace SmartCardWebApplication.Models.ViewModel
 {
+    public class CardsViewmodel
+    {
+        public CardsViewmodel()
+        {
+            Cards = new List<CardViewModel>();
+        }
+
+        public List<CardViewModel> Cards { get; set; }
+    }
+
     public class CardViewModel
     {
         public string FriendlyName { get; set; }

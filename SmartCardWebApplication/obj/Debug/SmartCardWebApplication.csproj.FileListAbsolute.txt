@@ -259,8 +259,10 @@ C:\Users\ccumpa\Documents\Proyectos Itteria\P-OPD\src-test\SmartCardWebApplicati
 C:\Users\ccumpa\Documents\Proyectos Itteria\P-OPD\src-test\SmartCardWebApplication\SmardCard\SmartCardWebApplication\bin\Microsoft.AI.ServerTelemetryChannel.xml
 C:\Users\ccumpa\Documents\Proyectos Itteria\P-OPD\src-test\SmartCardWebApplication\SmardCard\SmartCardWebApplication\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\ccumpa\Documents\Proyectos Itteria\P-OPD\src-test\SmartCardWebApplication\SmardCard\SmartCardWebApplication\bin\Microsoft.AI.Web.xml
-C:\Users\ccumpa\Documents\Proyectos Itteria\P-OPD\src-test\SmartCardWebApplication\SmardCard\SmartCardWebApplication\obj\Debug\SmartCardWebApplication.csprojAssemblyReference.cache
 C:\Users\ccumpa\Documents\Proyectos Itteria\P-OPD\src-test\SmartCardWebApplication\SmardCard\SmartCardWebApplication\obj\Debug\SmartCardWebApplication.csproj.CoreCompileInputs.cache
 C:\Users\ccumpa\Documents\Proyectos Itteria\P-OPD\src-test\SmartCardWebApplication\SmardCard\SmartCardWebApplication\obj\Debug\SmartCardWebApplication.csproj.CopyComplete
 C:\Users\ccumpa\Documents\Proyectos Itteria\P-OPD\src-test\SmartCardWebApplication\SmardCard\SmartCardWebApplication\obj\Debug\SmartCardWebApplication.dll
 C:\Users\ccumpa\Documents\Proyectos Itteria\P-OPD\src-test\SmartCardWebApplication\SmardCard\SmartCardWebApplication\obj\Debug\SmartCardWebApplication.pdb
+C:\Users\ccumpa\Documents\Proyectos Itteria\P-OPD\src-test\SmartCardWebApplication\SmardCard\SmartCardWebApplication\obj\Debug\SmartCardWebApplication.csprojAssemblyReference.cache
+C:\Users\ccumpa\Documents\Proyectos Itteria\P-OPD\src-test\SmartCardWebApplication\SmardCard\SmartCardWebApplication\bin\SmardCardActiveX.dll
+C:\Users\ccumpa\Documents\Proyectos Itteria\P-OPD\src-test\SmartCardWebApplication\SmardCard\SmartCardWebApplication\bin\SmardCardActiveX.pdb

@@ -19,7 +19,7 @@
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
-    <IISExpressSSLPort />
+    <IISExpressSSLPort>44355</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
@@ -202,6 +202,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Music\desktop.ini" />
+    <None Include="Properties\PublishProfiles\SmartCardWebApplication - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\commons\os.js" />
     <Content Include="Scripts\download.js" />
@@ -220,6 +221,8 @@
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\configurationsign\signador.js" />
     <Content Include="Scripts\SignadorCentralitzat.js" />
+    <Content Include="SignPPFv1Cab.CAB" />
+    <Content Include="SmardCard.CAB" />
     <Content Include="Utils\reproductor.swf" />
     <None Include="Views\Home\AppleCat.cshtml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -255,6 +258,12 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SmardCardActiveX\SmardCardActiveX.csproj">
+      <Project>{2f4838d4-9f16-4f17-9634-e50f44f7f1e8}</Project>
+      <Name>SmardCardActiveX</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

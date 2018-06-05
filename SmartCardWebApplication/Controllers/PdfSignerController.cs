@@ -64,10 +64,14 @@ namespace SmartCardWebApplication.Controllers
                 }
                 catch (Exception)
                 {
+
+
                     Console.WriteLine("Fallo");
                     continue;
                 }
             }
+
+            vM.FriendlyName = "NO Existen certificados";
         }
 
         [System.Web.Http.HttpPost]

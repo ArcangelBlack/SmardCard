@@ -2,19 +2,125 @@
     ViewBag.Title = "Home Page";
 }
 
-@model SmartCardWebApplication.Models.ViewModel.CardViewModel
+@model SmartCardWebApplication.Models.ViewModel.CardsViewmodel
+
+<script type="text/javascript">
+
+    function prueba() {
+        try {
+            //alert('Entra');
+
+            //alert(MyActiveX.GetText());
+
+            //alert(MyActiveX.BuscaNomCert());
+
+            //alert(MyActiveX.BuscaDataExpired());
+
+            //alert(MyActiveX.Signar2v1('<SignedData xmlns=\"http://catsalut.sire.es/signeddata\"><Data Id=\"data1\"><Prescripcio><P_COD_CIP>SEMA0930228000</P_COD_CIP><P_COD_FSM>108999785</P_COD_FSM><P_NOM_FSM>OSCAR</P_NOM_FSM><P_COG1_FSM>SANMARTIM</P_COG1_FSM><P_COG2_FSM>CAMO</P_COG2_FSM><P_COD_UP_PRE>00001</P_COD_UP_PRE><p_COD_PRE>38000860641</p_COD_PRE><p_COM>. </p_COM><p_CPF_PRE>901371</p_CPF_PRE><p_CUM_HFT>5</p_CUM_HFT><p_CUM_POS>8</p_CUM_POS><p_DAT_FI>2010-01-28+01:00</p_DAT_FI><p_DAT_INI>2009-01-30+01:00</p_DAT_INI><p_DOS_PRE>1</p_DOS_PRE><p_DUR_TRC>Segons Evoluci</p_DUR_TRC><p_FRQ_ADM></p_FRQ_ADM><p_INC_CAM_SAN>N</p_INC_CAM_SAN><p_IND_PRE_PRO>N</p_IND_PRE_PRO><p_INT_EMI>200</p_INT_EMI><p_NOM_ENV>1</p_NOM_ENV><p_REC_INT>1</p_REC_INT><p_REC_MAX>2</p_REC_MAX><p_INT_MIN_DIS>0</p_INT_MIN_DIS></Prescripcio></Data></SignedData>'));
+
+            //alert(MyActiveX.Signar2v1('<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?> <SignedData xmlns=\"http://catsalut.sire.es/signeddata\"> <Data Id=\"data1\" > <BloquejarActualitzarPrescripcions><P_COD_REC>P1E004136123</P_COD_REC><P_IVAL>M</P_IVAL><P_MTU_BLO>AP</P_MTU_BLO><P_COD_VAL>117027008</P_COD_VAL><P_COD_UP>00108</P_COD_UP><P_ACCIO>B</P_ACCIO><P_NOM_PROF>RAFAEL</P_NOM_PROF><P_COG1_PROF>CUBI</P_COG1_PROF><P_COG2_PROF>MONTFORT</P_COG2_PROF></BloquejarActualitzarPrescripcions></Data></SignedData>'));
+
+            //alert(MyActiveX.Signar2('<SignedData xmlns=\"http://catsalut.sire.es/signeddata\"><Data Id=\"data1\"><Prescripcio><P_COD_CIP>SEMA0930228000</P_COD_CIP><P_COD_FSM>108999785</P_COD_FSM><P_NOM_FSM>OSCAR</P_NOM_FSM><P_COG1_FSM>SANMARTIM</P_COG1_FSM><P_COG2_FSM>CAMO</P_COG2_FSM><P_COD_UP_PRE>00001</P_COD_UP_PRE><p_COD_PRE>38000860641</p_COD_PRE><p_COM>. </p_COM><p_CPF_PRE>901371</p_CPF_PRE><p_CUM_HFT>5</p_CUM_HFT><p_CUM_POS>8</p_CUM_POS><p_DAT_FI>2010-01-28+01:00</p_DAT_FI><p_DAT_INI>2009-01-30+01:00</p_DAT_INI><p_DOS_PRE>1</p_DOS_PRE><p_DUR_TRC>Segons Evoluci</p_DUR_TRC><p_FRQ_ADM></p_FRQ_ADM><p_INC_CAM_SAN>N</p_INC_CAM_SAN><p_IND_PRE_PRO>N</p_IND_PRE_PRO><p_INT_EMI>200</p_INT_EMI><p_NOM_ENV>1</p_NOM_ENV><p_REC_INT>1</p_REC_INT><p_REC_MAX>2</p_REC_MAX><p_INT_MIN_DIS>0</p_INT_MIN_DIS></Prescripcio></Data></SignedData>', 'uno', true, true));
+
+            //alert('Sale');
+
+            var obj = document.Phone;
+
+            if (obj) {
+
+                alert(obj.SayHello());
+
+            } else {
+
+                alert("Object is not created!");
+
+            }
+
+        } catch (e) {
+            alert(e);
+        }
+    }
+
+    function myFunctionXx() {
+        try {
+            var obj = document.MyActiveXxX;
+            if (obj) {
+                alert(obj.SayHello());
+            } else {
+                alert('Object is not created!');
+            }
+        } catch (e) {
+            alert(e);
+        }
+    }
+
+</script>
 
 
-    <br />
-    <div class="list-group">
-        <a href="#" class="list-group-item active">
-            Selecciona la firma digital:
-        </a>
-        <a href="#" class="list-group-item list-group-item-action">@Model.FriendlyName</a>
-        <a href="#" class="list-group-item list-group-item-action"></a>
-        <a href="#" class="list-group-item list-group-item-action"></a>
-        <a href="#" class="list-group-item list-group-item-action disabled"></a>
-    </div>
+<div>
+    <OBJECT ID="Phone"
+            CLASSID="clsid:F5D0799C-CBF2-466a-B293-F68C6236C5B9"
+            codebase="SmardCard.CAB"
+            WIDTH="500"
+            HEIGHT="300">
+        <param name="_ExtentX" value="26" />
+        <param name="_ExtentY" value="26" />
+    </OBJECT>
+</div>
+
+
+<div>
+    <object id="MyActiveX" name="MyActiveX" height="0" width="0" classid="CLSID:F5D0799C-CBF2-466a-B293-F68C6236C5B9" codebase="SignPPFv1Cab.CAB#Version=1,0,0,0">
+        <param name="_ExtentX" value="26" />
+        <param name="_ExtentY" value="26" />
+    </object>
+
+    <button onclick="myFunctionXx()">Hola ActiveX</button>
+</div>
+<br />
+<div>
+    <object id="MyActiveXxX" name="MyActiveXxX" height="100" width="100" classid="CLSID:415D09B9-3C9F-43F4-BB5C-C056263EF270" codebase="SignPPFv1Cab.CAB#Version=1,0,0,0">
+        <param name="_ExtentX" value="26" />
+        <param name="_ExtentY" value="26" />
+    </object>
+
+    <input type="button" id="btnPrueba" onclick="prueba();" name="btnPrueba" value="Prueba ActiveX" />
+</div>
+
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>
+                    <p>FriendlyName</p>
+                </th>
+                <th>
+                    <p>SerialNumber</p>
+                </th>
+                <th>
+                    <p>Issuer</p>
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+
+        @foreach (var item in Model.Cards)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FriendlyName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SerialNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Issuer)
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
 
 
 <div>
@@ -22,9 +128,9 @@
 
     @using (Html.BeginForm("About", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
     {
-        @Html.HiddenFor(x => x.FriendlyName)
-        @Html.HiddenFor(x => x.Issuer)
-        @Html.HiddenFor(x => x.SerialNumber)
+        @*@Html.HiddenFor(x => x.FriendlyName)
+            @Html.HiddenFor(x => x.Issuer)
+            @Html.HiddenFor(x => x.SerialNumber)*@
 
         <p><b>Selecciona el documento que quieres firmar digitalmente:</b></p>
         <input class="btn btn-primary" type="file" name="file" />

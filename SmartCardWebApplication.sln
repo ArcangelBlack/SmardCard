@@ -9,6 +9,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Smart Card Library", "Smart Card Library\Smart Card Library.csproj", "{8ABA01D4-E162-4573-A4D2-BB689BB596C6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmardCardActiveX", "SmardCardActiveX\SmardCardActiveX.csproj", "{2F4838D4-9F16-4F17-9634-E50F44F7F1E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ActiveXControls", "ActiveXControls", "{F7CAEE17-79A2-4C50-9AB3-09DAD4FBB4DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignPPFv1", "ActiveXControls\SignPPFv1\SignPPFv1.csproj", "{2003BD25-295F-49E6-AB2B-4A13C1235061}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupSmardCard", "ActiveXControls\SetupSmardCard\SetupSmardCard.vdproj", "{207233A6-D315-4DB3-8BFF-4346EB7135A0}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SmardCardCab", "SmardCard\SmardCard.vdproj", "{D0EE66A9-2C9F-47B5-88B6-91BAD553D22D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,9 +37,29 @@ Global
 		{8ABA01D4-E162-4573-A4D2-BB689BB596C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8ABA01D4-E162-4573-A4D2-BB689BB596C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8ABA01D4-E162-4573-A4D2-BB689BB596C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F4838D4-9F16-4F17-9634-E50F44F7F1E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F4838D4-9F16-4F17-9634-E50F44F7F1E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F4838D4-9F16-4F17-9634-E50F44F7F1E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F4838D4-9F16-4F17-9634-E50F44F7F1E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2003BD25-295F-49E6-AB2B-4A13C1235061}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2003BD25-295F-49E6-AB2B-4A13C1235061}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2003BD25-295F-49E6-AB2B-4A13C1235061}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2003BD25-295F-49E6-AB2B-4A13C1235061}.Release|Any CPU.Build.0 = Release|Any CPU
+		{207233A6-D315-4DB3-8BFF-4346EB7135A0}.Debug|Any CPU.ActiveCfg = Debug
+		{207233A6-D315-4DB3-8BFF-4346EB7135A0}.Release|Any CPU.ActiveCfg = Release
+		{D0EE66A9-2C9F-47B5-88B6-91BAD553D22D}.Debug|Any CPU.ActiveCfg = Debug
+		{D0EE66A9-2C9F-47B5-88B6-91BAD553D22D}.Debug|Any CPU.Build.0 = Debug
+		{D0EE66A9-2C9F-47B5-88B6-91BAD553D22D}.Release|Any CPU.ActiveCfg = Release
+		{D0EE66A9-2C9F-47B5-88B6-91BAD553D22D}.Release|Any CPU.Build.0 = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2F4838D4-9F16-4F17-9634-E50F44F7F1E8} = {F7CAEE17-79A2-4C50-9AB3-09DAD4FBB4DE}
+		{2003BD25-295F-49E6-AB2B-4A13C1235061} = {F7CAEE17-79A2-4C50-9AB3-09DAD4FBB4DE}
+		{207233A6-D315-4DB3-8BFF-4346EB7135A0} = {F7CAEE17-79A2-4C50-9AB3-09DAD4FBB4DE}
+		{D0EE66A9-2C9F-47B5-88B6-91BAD553D22D} = {F7CAEE17-79A2-4C50-9AB3-09DAD4FBB4DE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9E69F9CE-C48E-4423-AB76-DA55B02EAC84}
